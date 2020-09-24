@@ -7,12 +7,28 @@ import {Link} from 'react-router-dom';
 const Home = () => {
   return (<div className="home">
     <div className='imgs'>
-    <img src={homeImg} alt='hero' className='hero'/>
-    <img src={timer} alt='timer' className='timer'/>
-    <img src={calculator} alt='calculator' className='timer'/>
+      <div className='theme'>
+    <img src={homeImg} alt='hero' className='hero' />
+    <p>在线实用工具</p>
+      </div>
+    <div className='tools'>
+
+    <div className='timer-enter'>
+      <img src={timer} alt='timer' className='timer-png' width='200px'/>
+      <br/>
+      <Link to='/timer' className="calculator-name"  >计算器</Link>
     </div>
-    <Link to='/timer' className="calculator-name" >计算器</Link>
+
+    <div className='calculator-enter'>
+    <img src={calculator} alt='calculator' className='calculator-png'  width='200px'/>
+      <br/>
     <Link to='/calculator' className="timer-name" >倒计时器</Link>
+    </div>
+
+    </div>
+
+    </div>
+
   </div>);
 };
 
